@@ -30,11 +30,11 @@ Matching a Hex Value:
 ### Anchors
 In all regular expressions, a ^ at the beginning of the regular expression indicates we should match only at the beginning of the input string.  Similarly, a $ at the end of your regex is a placeholder for the end of the string.  For example, to require the first character is an uppercase or lowercase letter:
 ```md
-`^[a-z0-9_-]`
+`^#?([a-f0-9]{6}`
 ```
 Similarly, to require the string ends with a lowercase character:
 ```md
-`[a-z0-9_-]$`
+`[a-f0-9]{3})$`
 ```
 ### Quantifiers
 Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found. The following table lists the quantifiers supported by .NET.
@@ -57,8 +57,11 @@ QUANTIFIERS IN REGULAR EXPRESSIONS
 ### Bracket Expressions
 |Bracket Epressions| Description    |
 |   :---------:    |   :----------: |
+|`[a-f0-9]{6}`| Represents the letter form a-f, or digital form 0-9 with the length of 6.|
+|`[a-f0-9]{3}`| Represents the letter from a-f, or digital form 0-9 with the length of 3.|
 ### Character Classes
-
+|Character Classes| Description    |
+|   :---------:    |   :----------: |
 ### The OR Operator
 
 ### Flags

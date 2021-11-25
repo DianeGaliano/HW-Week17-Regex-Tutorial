@@ -10,8 +10,8 @@ or to find and replace a character or sequence of characters within a string. Th
 
 For example, the following regular expression can be used to verify that user input is a valid password:
 ```md
-Matching a Password:
-`/^[a-z0-9_-]{6,18}$/`
+Matching a Hex Value:
+`/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
 ```
 
 ## Table of Contents
@@ -34,7 +34,7 @@ In all regular expressions, a ^ at the beginning of the regular expression indic
 ```
 Similarly, to require the string ends with a lowercase character:
 ```md
-`^[a-z0-9_-]$`
+`[a-z0-9_-]$`
 ```
 ### Quantifiers
 Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found. The following table lists the quantifiers supported by .NET.
@@ -43,16 +43,20 @@ QUANTIFIERS IN REGULAR EXPRESSIONS
 |Greedy quantifier|	Lazy quantifier|	Description     |
 |   :---------:   | :---------:    |    :-----------:   |
 |*|	*?|	Match zero or more times.|
-|+|	+?	Match one or more times.|
+|+|	+?|	Match one or more times.|
 |?|	??|	Match zero or one time.|
 |{ n }|	{ n }?|	Match exactly n times.|
 |{ n ,}|	{ n ,}?|	Match at least n times.|
 { n , m }|	{ n , m }?|	Match from n to m times.|
 
 ### Grouping Constructs
-
+|Grouping Constructs| Description   |
+|   :----------:    |   :---------: |
+|`(`| Represents the start of the group|
+|`)`| Represnets the end of the group|
 ### Bracket Expressions
-
+|Bracket Epressions| Description    |
+|   :---------:    |   :----------: |
 ### Character Classes
 
 ### The OR Operator
